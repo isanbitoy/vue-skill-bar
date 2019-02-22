@@ -1,0 +1,64 @@
+{
+  "name": "vue-skill-bar",
+  "version": "0.1.5",
+  "description": "A Vue.js component that displays skill bar progress",
+  "main": "./dist/vue-skill-bar.common.js",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "build-bundle": "vue-cli-service build --target lib --name vue-skill-bar ./src/components/index.js",
+    "deploy": "node ./node_modules/vue-gh-pages/index.js",
+    "lint": "vue-cli-service lint"
+  },
+  "keywords": [
+    "vue",
+    "skill-bar",
+    "progress-bar"
+  ],
+  "author": "Lisandro A. Bitoy",
+  "license": "MIT",
+  "dependencies": {
+    "vue": "^2.5.22"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.3",
+    "@vue/cli-plugin-eslint": "^3.0.3",
+    "@vue/cli-service": "^3.0.3",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "vue-gh-pages": "^1.19.0",
+    "vue-template-compiler": "^2.5.21"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "files": [
+    "dist/*",
+    "src/*",
+    "public/*",
+    ".json",
+    ".js"
+  ]
+}
