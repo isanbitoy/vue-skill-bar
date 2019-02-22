@@ -3,10 +3,12 @@
   	<section class="app__banner">
   		<span class="app__banner__firstChild">
   			<i class="fa fa-github"></i>
-  			<a href=""><h1>vue-skill-bar</h1></a>
+  			<a :href="link1" target="_blank"><h1>vue-skill-bar</h1></a>
   		</span>
   		<span class="app__banner__lastChild">
-  			<p>npm install --save vue-skill-bar</p>
+  			<a :href="link2" target="_blank">
+  				<p class="npm-link">npm install --save vue-skill-bar</p>
+  			</a>
   		</span>
   	</section>
 	
@@ -75,6 +77,8 @@ export default {
   },
   data: function() {
   	return {
+  		link1: 'https://github.com/isanbitoy/vue-skill-bar',
+  		link2: 'https://www.npmjs.com/package/vue-skill-bar',
   		code1: '<skill-bar skill="HTML" level="100"/>',
   		code2: '<skill-bar skill="CSS" level="90" barColor="#42b983"/>',
   		code3: '<skill-bar skill="Javascript" level="80" barSize="18"/>',
@@ -162,5 +166,8 @@ h4 {
 	background: #eee;
 	left: 0; bottom: 0;
     width: 100%; height: 1px;
+}
+.npm-link {
+	color: #ffffff;
 }
 </style>
