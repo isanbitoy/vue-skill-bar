@@ -29,7 +29,9 @@ export default {
 		'skill-bar': SkillBar
 	},
 	data: function() {
-		return { ... }
+		return { 
+			... 
+		}
 	}
 }
 </script>
@@ -37,7 +39,7 @@ export default {
 
 ```
 
-## Exmaples
+## Examples
 
 ### Custom bar size
 ```
@@ -52,7 +54,7 @@ export default {
 ```
 | **Props**  | **Type**         | **Values**                | **default**      |
 | :--------- | :---------------	| :------------------------ | :--------------- |
-| skill		 | String           | text to display           | _(empty string)_ |
+| skill      | String           | text to display           | _(empty string)_ |
 | level      | Number           | 0 - 100                   | 0                |
 | maxLevel   | Number           | 100                       | 100              |
 | barSize    | Number \| String | small, medium, large, {n} | 32               |
