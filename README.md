@@ -36,9 +36,7 @@ export default {
 }
 </script>
 
-
 ```
-
 ## Examples
 
 ### Custom bar size
@@ -52,15 +50,15 @@ export default {
 
 ## Available Options
 ```
-| **Props**  | **Type**         | **Values**                | **default**      |
-| :--------- | :---------------	| :------------------------ | :--------------- |
-| skill      | String           | text to display           | _(empty string)_ |
-| level      | Number           | 0 - 100                   | 0                |
-| maxLevel   | Number           | 100                       | 100              |
-| barSize    | Number \| String | small, medium, large, {n} | 32               |
-| barColor   | String           | Color                     | #2196f3          |
-| bgColor    | String           | Color                     | #eee             |
-| fontColor  | String           | Color                     | #f1f1f1          |
+| Props | Type | Values | default |
+| --- | ---	| --- | --- |
+| skill | String | text to display |  |
+| level | Number | 0 - 100 | 0 |
+| maxLevel | Number | 100 | 100 |
+| barSize | Number \ String | small, medium, large, {n} | 32 |
+| barColor | String | Color | #2196f3 |
+| bgColor | String | Color | #eee |
+| fontColor | String | Color | #f1f1f1 |
 ```
 
 ##License
