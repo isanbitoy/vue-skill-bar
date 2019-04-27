@@ -52,7 +52,7 @@ export default {
 
 | Props | Type | Values | default |
 | --- | ---	| --- | --- |
-| skill | String | text to display | n |
+| skill | String | text to display | none |
 | level | Number | 0 - 100 | 0 |
 | maxLevel | Number | 100 | 100 |
 | barSize | Number \ String | small, medium, large | 32 |
@@ -61,11 +61,11 @@ export default {
 | fontColor | String | Color | #f1f1f1 |
 
 ##License
-```
+
 vue-skill-bar is an open source and release under the [MIT License](LICENSE).
 
 Copyright (C) 2019 [Lisandro A. Bitoy](https://github.com/isanbitoy).
-```
+
 
 
 
