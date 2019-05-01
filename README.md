@@ -60,7 +60,7 @@ export default {
 | bgColor | String | Color | #eee |
 | fontColor | String | Color | #f1f1f1 |
 
-##License
+## License
 
 vue-skill-bar is an open source and release under the [MIT License](LICENSE).
 
