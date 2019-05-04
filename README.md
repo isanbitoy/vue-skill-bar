@@ -2,13 +2,13 @@
 a ligthweight progress skill bar for vue
 
 ## Install
-```shell
+```
 npm install --save-dev vue-skill-bar
 ```
 
 ## Usage
 ### ES6
-```js
+```
 import Vue from 'vue'
 import { SkillBar } from 'vue-skill-bar'
 
@@ -35,7 +35,6 @@ export default {
 	}
 }
 </script>
-
 ```
 ## Examples
 
