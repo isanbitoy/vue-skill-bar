@@ -1,69 +1,97 @@
 <template>
   <div id="app">
-  	<section class="app__banner">
-  		<span class="app__banner__firstChild">
-  			<i class="fa fa-github"></i>
-  			<a :href="link1" target="_blank"><h1>vue-skill-bar</h1></a>
-  		</span>
-  		<span class="app__banner__lastChild">
-  			<a :href="link2" target="_blank">
-  				<p class="npm-link">npm install --save vue-skill-bar</p>
-  			</a>
-  		</span>
-  	</section>
+  	<header class="app__header">
+  		<div class="header__first-child">
+            <a :href="github_link" target="_blank">
+                <span :title="github_link">
+                    <i class="fa fa-github"></i>
+                </span>
+            </a>
+            <h2>vue-skill-bar</h2> 
+        </div>
+        <div><p>a lightweight progress skill bar for vue</p></div>
+        <div class="header__last-child">
+            <h3 class="install--command">{{ install_code }}</h3>
+        </div>
+        <nav>
+            <a :href="github_link" target="_blank">
+                <img :src="github_star" />
+            </a>
+            <a :href="npm_link" target="_blank">
+                <img :src="npm_version" />
+                <img :src="npm_download" />
+            </a>
+            <a :href="vue_link">
+                <img :src="vue_svg" />
+            </a>
+        </nav>
+  	</header>
 	
-	<section class="app__content">
-		<div class="app__content__box">
-			<div class="app__content__details">
-				<h3>Default Bar</h3>
-				<p>{{ code1 }}</p>
+	<main class="app__content">
+		<div class="app__content--box">
+			<div class="app__content--details">
+				<span><code>default props</code></span>
+				<span><code>{{ code_A }}</code></span>
 			</div>
-			<div class="box-line"></div>
-	  		<skill-bar skill="HTML" level="100" />
+			<div class="app__content--bar">
+				<skill-bar skill="HTML" level="100" />
+			</div>
 	  	</div>
 
-		<div class="app__content__box">
-			<div class="app__content__details">
-	  			<h3>Custom Color</h3>
-	  			<p>{{ code2 }}</p>
+		<div class="app__content--box">
+			<div class="app__content--details">
+	  			<span><code>custom color</code></span>
+				<span><code>{{ code_B }}</code></span>
 	  		</div>
-	  		<div class="box-line"></div>
-	  		<skill-bar barColor="#42b983" skill="CSS" level="90" />
+	  		<div class="app__content--bar">
+	  			<skill-bar barColor="#42b983" skill="CSS" level="90" />
+	  		</div>
 		</div>
 
-		<div class="app__content__box">
-			<h3>Standard Sizes</h3>
+		<div class="app__content--group">
+			<h1><code>Custom Sizes</code></h1>
 			<div class="box-line"></div>
-			<div class="app__content__bar">
-				<div class="app__content__details">
-					<h4>Custom</h4>
-					<p>{{ code3 }}</p>
-				</div>
-		  		<skill-bar barSize="18" skill="Javascript" level="80" />
-		  	</div>
-			<div class="app__content__bar">
-				<div class="app__content__details">
-					<h4>Small</h4>
-					<p>{{ code4 }}</p>
-				</div>
-		  		<skill-bar barSize="small" skill="C++" level="70" />
-		  	</div>
-		  	<div class="app__content__bar">
-		  		<div class="app__content__details">
-		  			<h4>Medium</h4>
-		  			<p>{{ code5 }}</p>
+			<div class="app__content--box">
+				<div class="app__content--details">
+					<span><code>Specific bar size</code></span>
+					<span><code>{{ code_C }}</code></span>
+			  	</div>
+			  	<div class="app__content--bar">
+		  			<skill-bar barSize="18" skill="Javascript" level="80" />
 		  		</div>
-		  		<skill-bar barSize="medium" skill="Python" level="60" />
 		  	</div>
-		  	<div class="app__content__bar">
-		  		<div class="app__content__details">
-		  			<h4>Large</h4>
-		  			<p>{{ code6 }}</p>
+
+			<div class="app__content--box">
+				<div class="app__content--details">
+					<span><code>Small bar size</code></span>
+					<span><code>{{ code_D }}</code></span>
+			  	</div>
+			  	<div class="app__content--bar">
+		  			<skill-bar barSize="small" skill="C++" level="70" />
 		  		</div>
-		  		<skill-bar barSize="large" skill="Java" level="50" />
+		  	</div>
+
+		  	<div class="app__content--box">
+		  		<div class="app__content--details">
+					<span><code>Medium bar size</code></span>
+					<span><code>{{ code_E }}</code></span>
+			  	</div>
+			  	<div class="app__content--bar">
+		  			<skill-bar barSize="medium" skill="Python" level="60" />
+		  		</div>
+		  	</div>
+
+		  	<div class="app__content--box">
+		  		<div class="app__content--details">
+					<span><code>Large bar size</code></span>
+					<span><code>{{ code_F }}</code></span>
+			  	</div>
+			  	<div class="app__content--bar">
+		  			<skill-bar barSize="large" skill="Java" level="50" />
+		  		</div>
 		  	</div>
 	  	</div>
-	</section>
+	</main>
   </div>
 </template>
 
@@ -77,19 +105,30 @@ export default {
   },
   data: function() {
   	return {
-  		link1: 'https://github.com/isanbitoy/vue-skill-bar',
-  		link2: 'https://www.npmjs.com/package/vue-skill-bar',
-  		code1: '<skill-bar skill="HTML" level="100"/>',
-  		code2: '<skill-bar skill="CSS" level="90" barColor="#42b983"/>',
-  		code3: '<skill-bar skill="Javascript" level="80" barSize="18"/>',
-  		code4: '<skill-bar skill="C++" level="70" barSize="small"/>',
-  		code5: '<skill-bar skill="Python" level="60" barSize="medium"/>',
-  		code6: '<skill-bar skill="Java" level="50" barSize="large"/>'
+  		github_link: 'https://github.com/isanbitoy/vue-skill-bar',
+  		npm_link: 'https://www.npmjs.com/package/vue-skill-bar',
+  		vue_link: 'https://vuejs.org/',
+        install_code: 'npm install --save vue-skill-bar',
+        github_star: 'https://img.shields.io/github/stars/isanbitoy/vue-skill-bar.svg?style=social&label=Star',
+        npm_version: 'https://img.shields.io/npm/v/vue-skill-bar.svg',
+        npm_download: 'https://img.shields.io/npm/dm/vue-skill-bar.svg',
+        vue_svg: 'https://img.shields.io/badge/vue-3.0-green.svg',
+
+  		code_A: '<skill-bar skill="HTML" level="100"/>',
+  		code_B: '<skill-bar skill="CSS" level="90" barColor="#42b983"/>',
+  		code_C: '<skill-bar skill="Javascript" level="80" barSize="18"/>',
+  		code_D: '<skill-bar skill="C++" level="70" barSize="small"/>',
+  		code_E: '<skill-bar skill="Python" level="60" barSize="medium"/>',
+  		code_F: '<skill-bar skill="Java" level="50" barSize="large"/>'
   	}
   }
 };
 </script>
 
+<style lang="scss">
+@import "@/assets/scss/style.scss";	
+</style>
+<!--
 <style>
 *, *::before, *::after {
   	padding: 0;
@@ -171,3 +210,4 @@ h4 {
 	color: #ffffff;
 }
 </style>
+-->

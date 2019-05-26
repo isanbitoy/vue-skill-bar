@@ -1,0 +1,34 @@
+/*Header*/
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%; height: auto;
+    padding: 2em;
+    color: $white;
+    background: $header-color;
+    .header__first-child {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 0.5em;
+        .fa-github {
+            font-size: 2.5rem;
+            padding: 0 0.2em;
+        }
+    }
+    .header__last-child {
+        padding: 1em 0;
+        .install--command {
+            max-width: 500px;
+            padding: 0.5em;
+            border-radius: 4px;
+            background: darken($header-color, 6%);
+            font-family: monospace;
+        }
+    }
+    nav {
+        text-align: center;
+    }
+}
