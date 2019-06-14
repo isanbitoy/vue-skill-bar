@@ -1,0 +1,53 @@
+%font-property {
+    font-family: monospace;
+    word-spacing: 2px;
+    letter-spacing: 0.5px;
+}
+[v-cloak] { display: none; }
+*, *::before, *::after {
+    padding: 0; margin: 0;
+    box-sizing: border-box;
+}
+img {
+    margin: 0 4px;
+}
+a { 
+    text-decoration: none; 
+    color: $white;
+}
+p {
+    font-size:  1rem; 
+    line-height: 1.2rem;
+    @extend %font-property;
+}
+h1 {
+    font-size: 2.0rem;
+    @extend %font-property;
+}
+h2 {
+    font-size: 1.5rem;
+    @extend %font-property;
+}
+h3 {
+    font-size: 1.0rem;
+    @extend %font-property;
+}
+code {
+    display: block;
+    position: relative;
+    margin: 1rem 0;
+    overflow: auto;
+    width: 485px;
+    max-width: 100%;
+    padding: 35px 10px 10px;
+    border-radius: 2px;
+    color: $white;
+    &::before {
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        height: 25px; 
+        line-height: 25px + .2;
+        padding-left: 10px;
+        font-weight: bold;
+    }
+}

@@ -1,0 +1,64 @@
+main {
+	@include set-flex(row, wrap, none, space-around);
+	//max-width: 76rem;
+	//margin: 0 auto;
+	padding: 2rem 0.5rem;
+	section:first-child {
+		margin: 0 0 3rem 0;
+	}
+	.app__content--box {
+		display: block;
+		position: relative;
+		max-width: 100%;
+		margin: 0 0 1.5rem 0;
+		padding: 0 0 1rem 0;
+		overflow: hidden;
+	    border-radius: 3px;
+	    color: $white;
+	    background: lighten($grey-color, 8%);
+	}
+	.app__content--group {
+		background: lighten($grey-color, 48%);
+		padding: 1rem;
+		border-radius: 3px;
+	}
+
+	.app__content--details {
+	    @include set-flex(row, wrap, none, space-between);
+		padding: 0.5rem;
+		margin: 0 0 0.5rem 0;
+		background: lighten($grey-color, 2%);
+		font-family: monospace;
+		span {
+			padding: 0 0.5rem;
+		}
+	}
+	.app__content--bar {
+		padding: 0 1rem;
+	}
+
+
+	.code--usage {
+    	background: lighten($grey-color, 12%);
+    	&.A::before {
+        	content: 'define globally';
+        	background: $grey-color;
+    	}
+    	&.B::before {
+        	content: 'define locally';
+        	background: $grey-color;
+    	}
+	}
+	
+	.box-line {
+		position: relative;
+		padding: 0.5rem 0;
+		&::after {
+			position: absolute;
+			content: '';
+			background: lighten($grey-color, 8%);
+			left: 0; top: 0;
+    		width: 100%; height: 1px;
+		}
+	}
+}
